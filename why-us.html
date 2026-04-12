@@ -1088,12 +1088,12 @@ nav {
 /* ===================== WHERE YOUR BUSINESS WILL SHOW UP ===================== */
 .visibility-section { background: var(--off-white); }
 
-.visibility-header { margin-bottom: 56px; }
+.visibility-header { margin-bottom: 52px; }
 
 .vis-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 
 /* Base card */
@@ -1105,26 +1105,20 @@ nav {
   transition: transform .25s, box-shadow .25s;
 }
 .vis-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 52px rgba(0,0,0,.18);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 44px rgba(0,0,0,.16);
 }
 
-/* Navy card */
-.vis-card-navy {
-  background: var(--navy);
-}
-/* Teal card */
-.vis-card-teal {
-  background: var(--teal);
-}
+.vis-card-navy { background: var(--navy); }
+.vis-card-teal { background: var(--teal); }
 
-/* Featured AI card spans full width */
+/* Full-width cards */
 .vis-card-featured {
   grid-column: 1 / -1;
-  background: linear-gradient(130deg, var(--navy) 0%, #073a7a 60%, #0A89A3 100%);
 }
-/* Grid texture on featured */
-.vis-card-featured::before {
+
+/* Grid texture on AI card */
+.vis-card-navy.vis-card-featured::before {
   content: '';
   position: absolute; inset: 0;
   background-image:
@@ -1133,6 +1127,10 @@ nav {
   background-size: 32px 32px;
   pointer-events: none;
   border-radius: 20px;
+}
+/* Subtle teal gradient on AI card */
+.vis-card-navy.vis-card-featured {
+  background: linear-gradient(130deg, var(--navy) 0%, #073a7a 55%, #0A89A3 100%);
 }
 
 .vis-card-top {
@@ -1161,7 +1159,7 @@ nav {
 }
 .vis-card-sub {
   font-size: 0.8rem;
-  color: rgba(255,255,255,.62);
+  color: rgba(255,255,255,.65);
   line-height: 1.5;
 }
 
@@ -1170,7 +1168,7 @@ nav {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
   position: relative;
 }
 .vis-list li {
@@ -1179,25 +1177,32 @@ nav {
   gap: 10px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255,255,255,.88);
+  color: rgba(255,255,255,.9);
   line-height: 1.3;
 }
 .vis-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.55);
   flex-shrink: 0;
 }
 .vis-dot-teal {
   background: var(--teal);
-  box-shadow: 0 0 6px rgba(10,137,163,.6);
+  box-shadow: 0 0 7px rgba(10,137,163,.7);
 }
 
-/* Two-column list layout for AI card */
+/* 2-col list for half-width cards */
 .vis-list-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 32px;
+  gap: 11px 24px;
+}
+
+/* 3-col list for full-width cards */
+.vis-list-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px 24px;
 }
 
 /* AI badge */
@@ -1206,25 +1211,25 @@ nav {
   align-items: center;
   gap: 8px;
   margin-top: 22px;
-  background: rgba(10,137,163,.18);
-  border: 1px solid rgba(10,137,163,.4);
+  background: rgba(10,137,163,.2);
+  border: 1px solid rgba(10,137,163,.45);
   border-radius: 100px;
   padding: 7px 16px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: .05em;
-  color: rgba(255,255,255,.85);
+  color: rgba(255,255,255,.9);
   position: relative;
 }
 
 /* Footer */
 .vis-footer {
-  margin-top: 44px;
+  margin-top: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 28px 32px;
+  padding: 26px 32px;
   background: #fff;
   border-radius: 16px;
   border: 1.5px solid #e2e2e2;
@@ -1238,20 +1243,40 @@ nav {
   max-width: 520px;
 }
 
-/* Responsive */
+/* ---- RESPONSIVE ---- */
+
+/* Tablet: 1024px — keep 2-col top row, stack full-width cards */
 @media (max-width: 1024px) {
-  .vis-grid { grid-template-columns: 1fr; }
-  .vis-card-featured { grid-column: 1; }
-  .vis-footer { flex-direction: column; align-items: flex-start; }
+  .vis-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .vis-list-three-col { grid-template-columns: repeat(3, 1fr); }
+  .vis-footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .vis-footer .btn-primary { align-self: flex-start; }
 }
+
+/* Large mobile: 768px — single column everything */
 @media (max-width: 768px) {
-  .vis-card { padding: 26px 22px; }
-  .vis-list-two-col { grid-template-columns: 1fr; }
-  .vis-footer { padding: 22px; }
-  .vis-footer-copy { font-size: 0.95rem; }
+  .vis-grid { grid-template-columns: 1fr; gap: 12px; }
+  .vis-card { padding: 24px 20px; }
+  .vis-card-featured { grid-column: 1; }
+  .vis-list-two-col { grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+  .vis-list-three-col { grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+  .vis-footer { padding: 22px 20px; gap: 14px; }
+  .vis-footer-copy { font-size: 0.92rem; }
+  .vis-ai-badge { font-size: 0.72rem; padding: 6px 13px; }
 }
+
+/* Small mobile: 480px */
 @media (max-width: 480px) {
-  .vis-card-label { font-size: 1.1rem; }
+  .vis-card { padding: 20px 16px; border-radius: 16px; }
+  .vis-card-label { font-size: 1.05rem; }
+  .vis-card-sub { font-size: 0.75rem; }
+  .vis-list li { font-size: 0.85rem; gap: 8px; }
+  .vis-list-two-col { grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+  .vis-list-three-col { grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+  .vis-icon-wrap { width: 42px; height: 42px; border-radius: 11px; }
+  .vis-footer { padding: 18px 16px; border-radius: 13px; }
+  .vis-footer-copy { font-size: 0.88rem; }
+  .vis-footer .btn-primary { width: 100%; justify-content: center; }
 }
 
 /* ===================== COMPARISON ===================== */
@@ -1622,10 +1647,7 @@ footer {
   .pain-quote { font-size: 1.5rem; }
 
   /* Visibility grid */
-  .vis-grid { grid-template-columns: 1fr; }
-  .vis-card-featured { grid-column: 1; }
-  .vis-list-two-col { grid-template-columns: 1fr 1fr; }
-  .vis-footer { flex-direction: column; align-items: flex-start; gap: 18px; }
+
 
   /* Founder: stack vertically */
   .founder-inner { grid-template-columns: 1fr; gap: 40px; padding: 0; }
@@ -1702,10 +1724,7 @@ footer {
   .pain-num-watermark { font-size: 5rem; }
 
   /* Visibility section */
-  .vis-card { padding: 24px 20px; }
-  .vis-list-two-col { grid-template-columns: 1fr; }
-  .vis-footer { padding: 20px; gap: 16px; }
-  .vis-footer-copy { font-size: 0.92rem; }
+
   .vis-ai-badge { font-size: 0.7rem; padding: 6px 13px; }
 
   /* Comparison table */
@@ -1793,11 +1812,10 @@ footer {
   .pain-num-watermark { font-size: 4.5rem; }
 
   /* Visibility */
-  .vis-card { padding: 22px 18px; }
+
   .vis-icon-wrap { width: 40px; height: 40px; border-radius: 11px; }
   .vis-card-label { font-size: 1.1rem; }
-  .vis-footer { padding: 18px; }
-  .vis-footer .btn-primary { width: 100%; justify-content: center; }
+
 
   /* Table: hide category column on very small screens */
   .th-cat, .td-cat { display: none; }
@@ -2672,7 +2690,7 @@ footer {
             <div class="vis-card-sub">Organic results across all major platforms</div>
           </div>
         </div>
-        <ul class="vis-list">
+        <ul class="vis-list vis-list-two-col">
           <li><span class="vis-dot"></span>Google Search</li>
           <li><span class="vis-dot"></span>Bing Search</li>
           <li><span class="vis-dot"></span>DuckDuckGo</li>
@@ -2692,7 +2710,7 @@ footer {
             <div class="vis-card-sub">Every place-based discovery environment</div>
           </div>
         </div>
-        <ul class="vis-list">
+        <ul class="vis-list vis-list-two-col">
           <li><span class="vis-dot"></span>Google Maps</li>
           <li><span class="vis-dot"></span>Apple Maps</li>
           <li><span class="vis-dot"></span>Bing Maps</li>
@@ -2701,7 +2719,7 @@ footer {
         </ul>
       </div>
 
-      <!-- AI Platforms -->
+      <!-- AI Platforms — full width -->
       <div class="vis-card vis-card-navy vis-card-featured">
         <div class="vis-card-top">
           <div class="vis-icon-wrap">
@@ -2712,7 +2730,7 @@ footer {
             <div class="vis-card-sub">We train AI how to find, categorize, and recommend you</div>
           </div>
         </div>
-        <ul class="vis-list vis-list-two-col">
+        <ul class="vis-list vis-list-three-col">
           <li><span class="vis-dot vis-dot-teal"></span>ChatGPT</li>
           <li><span class="vis-dot vis-dot-teal"></span>Google Gemini</li>
           <li><span class="vis-dot vis-dot-teal"></span>Google AI Overview</li>
@@ -2729,8 +2747,8 @@ footer {
         </div>
       </div>
 
-      <!-- Social -->
-      <div class="vis-card vis-card-teal">
+      <!-- Social Platforms — full width -->
+      <div class="vis-card vis-card-teal vis-card-featured vis-card-social">
         <div class="vis-card-top">
           <div class="vis-icon-wrap">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="3" stroke="#fff" stroke-width="1.6" fill="rgba(255,255,255,.1)"/><circle cx="19" cy="5" r="3" stroke="#fff" stroke-width="1.6" fill="rgba(255,255,255,.1)"/><circle cx="19" cy="19" r="3" stroke="#fff" stroke-width="1.6" fill="rgba(255,255,255,.1)"/><path d="M8 10.5l8-4M8 13.5l8 4" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>
@@ -2740,7 +2758,7 @@ footer {
             <div class="vis-card-sub">Where audiences discover and validate brands</div>
           </div>
         </div>
-        <ul class="vis-list">
+        <ul class="vis-list vis-list-three-col">
           <li><span class="vis-dot"></span>Facebook</li>
           <li><span class="vis-dot"></span>Instagram</li>
           <li><span class="vis-dot"></span>LinkedIn</li>
