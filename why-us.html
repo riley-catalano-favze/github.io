@@ -1279,6 +1279,103 @@ nav {
   .vis-footer .btn-primary { width: 100%; justify-content: center; }
 }
 
+/* Rich bg + grid texture for search and maps cards */
+.vis-card-rich { position: relative; }
+.vis-card-navy.vis-card-rich { background: linear-gradient(135deg, var(--navy) 0%, #073878 100%); }
+.vis-card-teal.vis-card-rich { background: linear-gradient(135deg, var(--teal) 0%, #077a91 100%); }
+.vis-card-rich::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 28px 28px; pointer-events: none; border-radius: 20px;
+}
+/* Social card teal gradient + texture */
+.vis-card-social { background: linear-gradient(130deg, #077a91 0%, var(--teal) 55%, #09b8d9 100%) !important; }
+.vis-card-social::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 28px 28px; pointer-events: none; border-radius: 20px;
+}
+
+/* Footer serving strip */
+.ft-serving-strip {
+  border-top: 1px solid rgba(255,255,255,.07);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  padding: 13px 0;
+  margin-bottom: 0;
+}
+.ft-serving-inner {
+  max-width: var(--inner-max);
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.ft-serving-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ft-serving-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: var(--teal);
+  white-space: nowrap;
+}
+.ft-serving-locations {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ft-serving-locations a {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,.48);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.ft-serving-locations a:hover { color: rgba(255,255,255,.85); }
+.ft-serving-dot {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  flex-shrink: 0;
+  display: inline-block;
+}
+.ft-serving-muted {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,.28);
+  white-space: nowrap;
+}
+.ft-serving-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ft-serving-right span {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+.ft-serving-right svg { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .ft-serving-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .ft-serving-right { align-self: flex-start; }
+}
+@media (max-width: 480px) {
+  .ft-serving-locations { gap: 7px; }
+  .ft-serving-locations a, .ft-serving-muted { font-size: 0.74rem; }
+}
+
 /* ===================== COMPARISON ===================== */
 .cmp-section { background: var(--dark); }
 .cmp-wrap {
@@ -1571,7 +1668,7 @@ footer {
 .ft-inner { max-width: var(--inner-max); margin: 0 auto; }
 .ft-top {
   display: grid; grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 46px; padding-bottom: 40px;
+  gap: 40px; padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,.09);
 }
 .fb-desc {
@@ -2680,7 +2777,7 @@ footer {
     <div class="vis-grid">
 
       <!-- Search Engines -->
-      <div class="vis-card vis-card-navy">
+      <div class="vis-card vis-card-navy vis-card-rich">
         <div class="vis-card-top">
           <div class="vis-icon-wrap">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="1.7"/><path d="M16.5 16.5L21 21" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>
@@ -2695,12 +2792,13 @@ footer {
           <li><span class="vis-dot"></span>Bing Search</li>
           <li><span class="vis-dot"></span>DuckDuckGo</li>
           <li><span class="vis-dot"></span>Featured Snippets</li>
+          <li><span class="vis-dot"></span>Yahoo Search</li>
           <li><span class="vis-dot"></span>People Also Ask</li>
         </ul>
       </div>
 
       <!-- Maps -->
-      <div class="vis-card vis-card-teal">
+      <div class="vis-card vis-card-teal vis-card-rich">
         <div class="vis-card-top">
           <div class="vis-icon-wrap">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#fff" stroke-width="1.7" fill="rgba(255,255,255,.15)"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>
@@ -2716,6 +2814,7 @@ footer {
           <li><span class="vis-dot"></span>Bing Maps</li>
           <li><span class="vis-dot"></span>Google Business Profile</li>
           <li><span class="vis-dot"></span>Local Pack (3-Pack)</li>
+          <li><span class="vis-dot"></span>Local Directories</li>
         </ul>
       </div>
 
@@ -2872,6 +2971,13 @@ footer {
         <p>Campaigns go live. You get plain-language reporting that shows exactly what is happening, what it means, and what comes next.</p>
       </div>
     </div>
+    <div style="text-align:center;margin-top:52px">
+      <a href="/contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;font-size:1rem;">
+        Start My Free Consultation
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p style="margin-top:14px;font-size:0.85rem;color:rgba(255,255,255,.45);">Free. No obligation. No pitch. Just a real conversation.</p>
+    </div>
   </div>
 </section>
 
@@ -2880,7 +2986,7 @@ footer {
   <div class="sec-inner">
     <span class="lbl lbl-dark">Favze Insights</span>
     <h2 class="ttl ttl-dark" id="blog-heading">Expertise You Can Read</h2>
-    <p class="sub sub-dark" style="margin-top:14px;">We do not just talk about SEO, AEO, and GEO. We write the playbooks. Here is proof that Favze lives at the cutting edge of how customers find businesses in 2026.</p>
+    <p class="sub sub-dark" style="margin-top:14px;">We do not just talk about SEO, AEO, and GEO. We write the playbooks. Here is proof that Favze lives at the cutting edge of how customers find businesses today.</p>
     <div class="blog-grid">
 
       <a href="/favze-insights/blog-article-hierarchy" class="blog-card">
@@ -3030,7 +3136,7 @@ footer {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
           <a href="https://www.threads.com/@favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Threads">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068v-.136c0-3.518.85-6.372 2.495-8.423C5.845 1.205 8.598.024 12.18 0h.014c2.746.018 5.143.822 6.929 2.293 1.698 1.404 2.732 3.38 3.049 5.716l-2.683.057c-.254-1.704-1.004-3.066-2.182-3.955-1.109-.836-2.581-1.26-4.313-1.271-2.848.019-5.024.907-6.47 2.643-1.357 1.632-2.05 4.077-2.05 7.268v.136c0 3.191.693 5.636 2.05 7.268 1.446 1.736 3.622 2.624 6.47 2.643 1.732-.011 3.204-.435 4.313-1.271 1.178-.889 1.928-2.251 2.182-3.955l2.683.057c-.317 2.336-1.351 4.312-3.049 5.716-1.786 1.471-4.183 2.275-6.929 2.293h-.007zm.627-8.604c-1.26 0-2.348-.34-3.15-1.003-.774-.639-1.22-1.538-1.29-2.596-.09-1.388.406-2.591 1.383-3.389.875-.715 2.086-1.078 3.472-1.043l2.43.067.01-.43c.027-1.148-.231-1.997-.773-2.523-.536-.518-1.379-.779-2.513-.779-2.149 0-2.604 1.168-2.722 1.762l-2.594-.489c.196-.985.683-1.862 1.45-2.589.934-.882 2.265-1.357 3.866-1.357 1.858 0 3.322.534 4.354 1.587 1.007 1.027 1.51 2.499 1.462 4.248l-.068 2.844-2.396-.066c-1.179-.032-2.179.206-2.877.671-.617.412-.917.979-.868 1.645.049.666.395 1.205.98 1.577.585.372 1.35.557 2.282.557.952 0 1.847-.213 2.559-.612l.009 2.354c-.89.433-1.946.663-3.007.663z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 192 192" fill="currentColor"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.23c8.25.054 14.476 2.452 18.502 7.13 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.244-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 6.996 4.637 16.01 6.93 25.405 6.408 12.39-.698 22.116-5.402 28.897-13.98 5.139-6.549 8.384-15.026 9.801-25.677 5.879 3.548 10.232 8.226 12.665 13.787 4.266 9.977 4.515 26.38-8.832 39.638-11.692 11.619-25.759 16.638-47.026 16.804-23.714-.186-41.624-7.778-53.234-22.553C22.721 142.126 17.365 124.61 17.142 102c.223-22.61 5.579-40.127 15.916-52.025C44.67 36.189 62.58 28.597 86.294 28.41c23.887.187 42.437 7.813 55.12 22.666 6.228 7.285 10.918 16.44 14.035 27.048l16.198-4.308c-3.767-13.289-9.661-24.745-17.635-34.209-16.104-18.843-39.687-28.456-69.978-28.656H83.7c-30.142.2-53.317 9.83-68.85 28.619C2.545 52.419-3.614 72.699-3.833 100.022v.068c.219 27.325 6.378 47.605 18.882 62.294 15.533 18.789 38.708 28.419 68.85 28.619h.35c26.888-.189 45.839-7.24 61.418-22.738 20.291-20.17 19.67-45.494 12.997-60.983-4.797-11.219-13.981-20.3-26.127-26.294zm-45.99 43.06c-10.426.585-21.256-4.093-21.82-14.18-.427-8.014 5.702-16.951 24.134-18.003 2.109-.122 4.176-.182 6.206-.182 6.048 0 11.695.606 16.874 1.768-1.919 23.955-15.13 30.027-25.394 30.597z"/></svg>
           </a>
           <a href="https://x.com/favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on X">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -3077,9 +3183,9 @@ footer {
         <div style="margin-top:22px">
           <h4>Contact</h4>
           <div class="fcon">
-            <a href="/cdn-cgi/l/email-protection#285a41444d51684e495e524d064b4745">
+            <a href="mailto:riley@favze.com">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-              <span class="__cf_email__" data-cfemail="c1b3a8ada4b881a7a0b7bba4efa2aeac">[email&#160;protected]</span>
+              riley@favze.com
             </a>
             <a href="tel:+15747475012">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>
@@ -3093,6 +3199,32 @@ footer {
         </div>
       </div>
     </div>
+    <!-- Local SEO serving strip -->
+    <div class="ft-serving-strip">
+      <div class="ft-serving-inner">
+        <div class="ft-serving-left">
+          <span class="ft-serving-label">SERVING</span>
+          <div class="ft-serving-locations">
+            <a href="/areas-served/northern-indiana">Northern Indiana</a>
+            <span class="ft-serving-dot" aria-hidden="true"></span>
+            <a href="/areas-served/michiana">Michiana</a>
+            <span class="ft-serving-dot" aria-hidden="true"></span>
+            <a href="/areas-served/elkhart-county">Elkhart County</a>
+            <span class="ft-serving-dot" aria-hidden="true"></span>
+            <a href="/areas-served/goshen">Goshen</a>
+            <span class="ft-serving-dot" aria-hidden="true"></span>
+            <a href="/areas-served/south-bend">South Bend</a>
+            <span class="ft-serving-dot" aria-hidden="true"></span>
+            <span class="ft-serving-muted">and Surrounding Areas</span>
+          </div>
+        </div>
+        <div class="ft-serving-right">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+          <span>BASED IN MIDDLEBURY, ELKHART COUNTY, INDIANA</span>
+        </div>
+      </div>
+    </div>
+
     <div class="fb-bot">
       <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
