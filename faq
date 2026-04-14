@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing FAQ | Favze Digital Marketing | Northern Indiana</title>
+<meta name="description" content="Honest answers to every digital marketing question. From SEO and AI optimization to pricing and getting started  -  Favze gives you straight answers, zero fluff.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#064187;
+  --teal:#0A89A3;
+  --dark:#0a0a0a;
+  --dark2:#111111;
+  --white:#ffffff;
+  --off-white:#f4f4f0;
+  --border-dark:rgba(255,255,255,0.07);
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --radius-card:20px;
+  --radius-sm:10px;
+  --inner-max:1100px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--dark);color:var(--white);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+button{font-family:var(--font-body);cursor:pointer}
+
+/* ---- NAV ---- */
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nl{display:flex;align-items:center;gap:4px;list-style:none}
+.nl a{font-weight:500;font-size:.875rem;padding:7px 12px;border-radius:8px;color:#0a0a0a;transition:background .2s}
+.nl a:hover{background:#f0f0f0}
+.nl a.active{color:var(--navy);font-weight:700}
+.nc{background:var(--navy)!important;color:#fff!important;padding:9px 18px!important;border-radius:9px!important;font-weight:700!important;transition:background .2s!important}
+.nc:hover{background:var(--teal)!important}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
+.hb span{display:block;width:24px;height:2px;background:#0a0a0a;border-radius:2px;transition:.25s}
+.hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0}
+.hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:18px 5% 22px;z-index:99;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.mm.open{display:flex}
+.mm a{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:#0a0a0a;transition:background .2s}
+.mm a:hover{background:#f0f0f0}
+.mc{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important}
+.nav-logo-img{height:30px;width:auto}
+
+/* ---- HERO ---- */
+.faq-hero{position:relative;overflow:hidden;background:var(--dark);padding:72px 5% 64px}
+.faq-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(6,65,135,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(6,65,135,.065) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
+.faq-hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 75% 25%,rgba(10,137,163,.18) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 10% 80%,rgba(6,65,135,.25) 0%,transparent 60%);pointer-events:none}
+.faq-hero-inner{position:relative;max-width:var(--inner-max);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:52px;align-items:center}
+.hero-left{min-width:0}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(10,137,163,.14);border:1px solid rgba(10,137,163,.38);border-radius:100px;padding:6px 18px;font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);margin-bottom:24px}
+.hdot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.faq-hero h1{font-family:var(--font-display);font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:-.01em;margin-bottom:20px}
+.h1-line{display:block;font-size:clamp(2.6rem,4.5vw,4.8rem)}
+.h1-line.teal{color:var(--teal)}
+.h1-line.boxed{display:inline-block;color:var(--navy);background:var(--white);padding:2px 14px 4px;border-radius:6px;line-height:1.05;margin-top:4px}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.62);line-height:1.75;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn-primary{background:var(--navy);color:#fff;font-weight:700;padding:14px 28px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:none;cursor:pointer;transition:background .2s;font-family:var(--font-body)}
+.btn-primary:hover{background:var(--teal)}
+.btn-ghost{background:transparent;color:#fff;font-weight:700;padding:13px 26px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:1.5px solid rgba(255,255,255,.25);transition:.2s;font-family:var(--font-body)}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:28px 36px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.09)}
+.hstat-num{font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--teal);line-height:1}
+.hstat-label{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.45}
+
+/* ---- CATEGORY NAV ---- */
+.cat-nav{background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.06);padding:0 5%;position:sticky;top:68px;z-index:50;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-inner{max-width:var(--inner-max);margin:0 auto;display:flex;gap:0;white-space:nowrap}
+.cat-btn{background:none;border:none;color:rgba(255,255,255,.45);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:16px 18px;cursor:pointer;font-family:var(--font-body);border-bottom:2px solid transparent;transition:.2s;flex-shrink:0}
+.cat-btn:hover{color:rgba(255,255,255,.8)}
+.cat-btn.active{color:var(--teal);border-bottom-color:var(--teal)}
+
+/* ---- MAIN FAQ LAYOUT ---- */
+.faq-main{padding:64px 5% 80px;max-width:var(--inner-max);margin:0 auto}
+
+/* ---- SECTION ---- */
+.faq-section{margin-bottom:72px;scroll-margin-top:0}
+.section-header{display:flex;align-items:flex-start;gap:18px;margin-bottom:36px}
+.section-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-icon.navy-bg{background:rgba(6,65,135,.25);border:1.5px solid rgba(6,65,135,.4)}
+.section-icon.teal-bg{background:rgba(10,137,163,.2);border:1.5px solid rgba(10,137,163,.35)}
+.section-meta{}
+.section-num{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;display:block}
+.section-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05}
+
+/* ---- ACCORDION ---- */
+.faq-list{display:flex;flex-direction:column;gap:0;border-radius:var(--radius-card);overflow:hidden;border:1.5px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.055)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-weight:700;font-size:.97rem;color:rgba(255,255,255,.88);cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;font-family:var(--font-body);transition:background .2s;position:relative}
+.faq-q:hover{background:rgba(255,255,255,.03)}
+.faq-item.open .faq-q{background:rgba(6,65,135,.12);color:#fff}
+.faq-item.open .faq-q::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--navy),var(--teal));border-radius:0}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:background .2s,transform .25s}
+.faq-item.open .faq-icon{background:var(--navy);transform:rotate(45deg)}
+.faq-a{display:none;padding:0 24px 24px;font-size:.915rem;color:rgba(255,255,255,.62);line-height:1.78;border-top:1px solid rgba(255,255,255,.05);padding-top:18px}
+.faq-a.show{display:block}
+.faq-a a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.faq-a a:hover{color:#fff}
+.faq-a strong{color:rgba(255,255,255,.85);font-weight:700}
+
+/* ---- HIGHLIGHT CALLOUT ---- */
+.faq-callout{background:linear-gradient(135deg,rgba(6,65,135,.35),rgba(10,137,163,.25));border:1.5px solid rgba(10,137,163,.3);border-radius:var(--radius-card);padding:28px 32px;margin-bottom:72px;display:flex;align-items:flex-start;gap:18px}
+.callout-icon{width:44px;height:44px;border-radius:12px;background:rgba(10,137,163,.25);border:1.5px solid rgba(10,137,163,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.callout-text{}
+.callout-text h3{font-family:var(--font-display);font-size:1.2rem;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:8px;letter-spacing:.04em}
+.callout-text p{font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.7}
+.callout-text a{color:var(--teal);font-weight:700}
+
+/* ---- CTA STRIP ---- */
+.cta-strip{background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 62%,var(--navy) 100%);padding:76px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px}
+.cta-inner{position:relative;max-width:680px;margin:0 auto}
+.cta-strip h2{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;color:#fff;text-transform:uppercase;line-height:1.02;margin-bottom:14px}
+.cta-strip p{color:rgba(255,255,255,.74);font-size:1rem;margin-bottom:32px;line-height:1.68}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--navy);font-weight:700;padding:14px 28px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;font-family:var(--font-body);transition:.2s}
+.btn-white:hover{background:#eee}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;font-weight:700;padding:13px 26px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:1.5px solid rgba(255,255,255,.28);font-family:var(--font-body);transition:.2s}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22)}
+
+/* ---- FOOTER ---- */
+footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--border-dark)}
+.ft-inner{max-width:var(--inner-max);margin:0 auto}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.09)}
+.fb-desc{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.72;margin-top:12px;max-width:280px}
+.fc h4{font-weight:900;font-size:.78rem;color:#fff;margin-bottom:14px;letter-spacing:.09em;text-transform:uppercase}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc ul li a{font-size:.83rem;color:rgba(255,255,255,.42);transition:color .2s}
+.fc ul li a:hover{color:#fff}
+.fcon{display:flex;flex-direction:column;gap:8px}
+.fcon a{font-size:.83rem;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:7px;transition:color .2s}
+.fcon a:hover{color:#fff}
+.fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.fb-bot p{font-size:.78rem;color:rgba(255,255,255,.26)}
+.fb-bot a{color:rgba(255,255,255,.32);font-size:.78rem;transition:color .2s}
+.fb-bot a:hover{color:#fff}
+
+/* ---- RESPONSIVE ---- */
+/* 1024: collapse hero grid */
+@media(max-width:1024px){
+  .faq-hero-inner{grid-template-columns:1fr;gap:40px}
+  .qm-widget{max-width:560px}
+  .h1-line{font-size:clamp(2.6rem,5vw,4rem)}
+}
+/* 768: mobile */
+@media(max-width:768px){
+  .nl{display:none}
+  .hb{display:flex}
+  nav{padding:0 4.5%}
+  .faq-hero{padding:52px 4.5% 48px}
+  .faq-hero-inner{gap:28px}
+  .qm-widget{max-width:100%}
+  .hero-sub{font-size:.96rem}
+  .hero-stats{gap:20px 28px;margin-top:28px;padding-top:22px}
+  .hstat-num{font-size:1.9rem}
+  .faq-main{padding:40px 4.5% 56px}
+  .cat-btn{padding:13px 13px;font-size:.7rem}
+  .section-header{flex-direction:column;gap:12px}
+  .faq-callout{flex-direction:column;gap:14px;padding:22px 20px}
+  .ft-top{grid-template-columns:1fr;gap:28px}
+  .fb-desc{max-width:100%}
+}
+/* 480: small phones */
+@media(max-width:480px){
+  .faq-hero{padding:44px 4% 40px}
+  .h1-line{font-size:clamp(2rem,8.5vw,2.6rem)}
+  .hero-badge{font-size:.66rem;padding:5px 14px}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{width:100%;justify-content:center}
+  .hero-stats{gap:16px 24px}
+  .hstat-num{font-size:1.75rem}
+  .hstat-label{font-size:.74rem}
+  .faq-q{padding:15px 16px;font-size:.88rem}
+  .faq-a{padding:0 16px 18px;padding-top:14px;font-size:.875rem}
+  .section-title{font-size:1.35rem}
+  .cta-btns{flex-direction:column;align-items:stretch}
+  .cta-btns a{width:100%;justify-content:center}
+  .cta-strip{padding:52px 4%}
+  .faq-main{padding:32px 4% 48px}
+}
+
+/* ---- HERO LAYOUT: TWO COLUMN ---- */
+.faq-hero-inner{position:relative;max-width:var(--inner-max);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center}
+.hero-left{min-width:0}
+
+/* ---- QUESTION MACHINE WIDGET ---- */
+.qm-widget{position:relative;width:100%}
+.qm-outer{border-radius:24px;overflow:hidden;background:#0d0d0d;border:1.5px solid rgba(255,255,255,.1);padding:0}
+
+/* Top bar with dots */
+.qm-topbar{background:#161616;padding:12px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.07)}
+.qm-dot{width:10px;height:10px;border-radius:50%}
+.qm-dot-r{background:#ff5f57}
+.qm-dot-y{background:#febc2e}
+.qm-dot-g{background:#28c840}
+.qm-topbar-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-left:auto}
+
+/* The big Q display */
+.qm-body{padding:28px 24px 24px}
+.qm-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:block}
+
+.qm-question-wrap{min-height:80px;display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}
+.qm-q-mark{font-family:var(--font-display);font-size:3.2rem;font-weight:900;color:var(--teal);line-height:1;flex-shrink:0;animation:qpulse 2s ease-in-out infinite}
+@keyframes qpulse{0%,100%{opacity:1}50%{opacity:.55}}
+.qm-question-text{font-family:var(--font-display);font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700;text-transform:uppercase;color:#fff;line-height:1.2;letter-spacing:.02em;padding-top:8px}
+.qm-cursor{display:inline-block;width:2px;height:1.1em;background:var(--teal);vertical-align:text-bottom;margin-left:2px;animation:blink .75s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* Divider */
+.qm-divider{height:1px;background:rgba(255,255,255,.07);margin:0 0 20px}
+
+/* Answer reveal */
+.qm-answer-label{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;display:block}
+.qm-answer-text{font-size:.875rem;color:rgba(255,255,255,.72);line-height:1.65;min-height:54px;transition:opacity .3s}
+.qm-answer-text.fading{opacity:0}
+
+/* Progress dots */
+.qm-dots{display:flex;gap:6px;margin-top:20px;align-items:center}
+.qm-pdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .3s,width .3s}
+.qm-pdot.active{background:var(--teal);width:20px;border-radius:3px}
+
+/* Skip hint */
+.qm-skip{font-size:.68rem;color:rgba(255,255,255,.25);font-weight:600;margin-left:auto;cursor:pointer;padding:2px 0;transition:color .2s;background:none;border:none;font-family:var(--font-body)}
+.qm-skip:hover{color:rgba(255,255,255,.55)}
+
+/* Floating tag cloud around widget */
+.qm-tags{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px;border-top:1px solid rgba(255,255,255,.07)}
+.qm-tag{font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.45);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:4px 12px;cursor:pointer;transition:all .2s}
+.qm-tag:hover,.qm-tag.active{background:rgba(10,137,163,.2);border-color:rgba(10,137,163,.5);color:var(--teal)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .faq-hero-inner{grid-template-columns:1fr;gap:36px}
+  .qm-widget{max-width:560px}
+}
+@media(max-width:768px){
+  .faq-hero-inner{gap:28px}
+  .qm-widget{max-width:100%}
+  .qm-body{padding:22px 18px 18px}
+  .qm-q-mark{font-size:2.6rem}
+  .qm-question-text{font-size:1.05rem}
+}
+@media(max-width:480px){
+  .qm-body{padding:18px 16px 16px}
+  .qm-tags{padding:14px 16px;gap:6px}
+  .qm-tag{font-size:.62rem;padding:4px 10px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" style="display:flex;align-items:center">
+    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
+  </a>
+  <ul class="nl">
+    <li><a href="/services">Services</a></li>
+    <li><a href="/favze-insights">Articles</a></li>
+    <li><a href="/why-choose-us">Why Us</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/digital-marketing-faq" class="active">FAQ</a></li>
+    <li><a href="/contact" class="nc">Free Consultation</a></li>
+  </ul>
+  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm">
+  <a href="/services">Services</a>
+  <a href="/favze-insights">Articles</a>
+  <a href="/why-choose-us">Why Us</a>
+  <a href="/about">About</a>
+  <a href="/digital-marketing-faq">FAQ</a>
+  <a href="/contact" class="mc">Start Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="faq-hero">
+  <div class="faq-hero-grid"></div>
+  <div class="faq-hero-glow"></div>
+  <div class="faq-hero-inner">
+
+    <!-- LEFT: copy + stats -->
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hdot"></span>Northern Indiana &amp; Michiana</div>
+      <h1>
+        <span class="h1-line">Every Question.</span>
+        <span class="h1-line teal">Straight Answers.</span>
+        <span class="h1-line boxed">Zero Fluff.</span>
+      </h1>
+      <p class="hero-sub">No agency speak. No upsell. Just honest answers to the questions every Northern Indiana business owner asks before, during, and after working with a digital marketing agency.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/services" class="btn-ghost">Explore All Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hstat-num">15</div><div class="hstat-label">FAQ Categories<br>Covered</div></div>
+        <div><div class="hstat-num">60+</div><div class="hstat-label">Questions<br>Answered</div></div>
+        <div><div class="hstat-num">$0</div><div class="hstat-label">Hidden Fees<br>Ever. Period.</div></div>
+        <div><div class="hstat-num">1</div><div class="hstat-label">Certified Strategist<br>Direct Access</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Question Machine widget -->
+    <div class="qm-widget" aria-label="Interactive FAQ preview">
+      <div class="qm-outer">
+        <div class="qm-topbar">
+          <span class="qm-dot qm-dot-r"></span>
+          <span class="qm-dot qm-dot-y"></span>
+          <span class="qm-dot qm-dot-g"></span>
+          <span class="qm-topbar-label">favze-faq.live</span>
+        </div>
+        <div class="qm-body">
+          <span class="qm-label">Questions we get asked a lot</span>
+          <div class="qm-question-wrap">
+            <span class="qm-q-mark">?</span>
+            <div class="qm-question-text" id="qm-q">WHY ISN'T MY MARKETING WORKING<span class="qm-cursor"></span></div>
+          </div>
+          <div class="qm-divider"></div>
+          <span class="qm-answer-label">Favze's answer</span>
+          <div class="qm-answer-text" id="qm-a">Usually one of four things: you're not visible, your message isn't landing, your site doesn't convert, or you're on the wrong channel. Favze finds which one before recommending anything.</div>
+          <div class="qm-dots" id="qm-dots">
+            <span class="qm-pdot active" data-i="0"></span>
+            <span class="qm-pdot" data-i="1"></span>
+            <span class="qm-pdot" data-i="2"></span>
+            <span class="qm-pdot" data-i="3"></span>
+            <span class="qm-pdot" data-i="4"></span>
+            <button class="qm-skip" id="qm-skip">skip</button>
+          </div>
+        </div>
+        <div class="qm-tags" id="qm-tags">
+          <span class="qm-tag active" data-i="0">Marketing</span>
+          <span class="qm-tag" data-i="1">Pricing</span>
+          <span class="qm-tag" data-i="2">AI Search</span>
+          <span class="qm-tag" data-i="3">Local SEO</span>
+          <span class="qm-tag" data-i="4">Getting Started</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATEGORY NAV -->
+<nav class="cat-nav" aria-label="FAQ categories">
+  <div class="cat-nav-inner">
+    <button class="cat-btn active" data-target="about">About Favze</button>
+    <button class="cat-btn" data-target="basics">DM Basics</button>
+    <button class="cat-btn" data-target="services">Services</button>
+    <button class="cat-btn" data-target="strategy">Strategy</button>
+    <button class="cat-btn" data-target="leads">Lead Gen</button>
+    <button class="cat-btn" data-target="results">Results</button>
+    <button class="cat-btn" data-target="pricing">Pricing</button>
+    <button class="cat-btn" data-target="local">Local SEO</button>
+    <button class="cat-btn" data-target="ai">AI &amp; GEO</button>
+    <button class="cat-btn" data-target="platforms">Platforms</button>
+    <button class="cat-btn" data-target="problems">Mistakes</button>
+    <button class="cat-btn" data-target="process">Process</button>
+    <button class="cat-btn" data-target="trust">Trust</button>
+    <button class="cat-btn" data-target="whyfavze">Why Favze</button>
+    <button class="cat-btn" data-target="start">Get Started</button>
+  </div>
+</nav>
+
+<!-- FAQ MAIN -->
+<main class="faq-main">
+
+  <!-- CALLOUT -->
+  <div class="faq-callout">
+    <div class="callout-icon">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#0A89A3" stroke-width="1.6"/><path d="M11 7v4.5M11 14v.1" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </div>
+    <div class="callout-text">
+      <h3>Can't find your answer?</h3>
+      <p>These are the questions Favze hears most. But every business is different. If your question isn't here, <a href="/contact">book a free consultation</a> and Riley will answer it directly  -  no obligation, no pitch, just a real conversation about your business.</p>
+    </div>
+  </div>
+
+  <!-- 1: ABOUT FAVZE -->
+  <section class="faq-section" id="about">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4.5" stroke="#0A89A3" stroke-width="1.6"/><path d="M3 21c0-5 4-9 9-9s9 4 9 9" stroke="#0A89A3" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">01  -  About Favze</span>
+        <h2 class="section-title">Who We Are</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is Favze Digital Marketing?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded and led by <strong>Riley Catalano</strong>, Favze is built around one idea: every business deserves a marketing strategy that is honest, custom, and actually works  -  without hidden fees or rotating account reps who don't know your market.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What makes Favze different from other agencies?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Three things. First, <strong>founder-led strategy</strong>  -  Riley Catalano builds your strategy, runs it, and answers your questions directly. No handoffs. Second, <strong>zero hidden fees</strong>  -  every cost is explained before you commit, with no surprises buried in fine print. Third, <strong>AI-ready marketing</strong>  -  Favze optimizes for ChatGPT, Google Gemini, Perplexity, and other AI platforms, not just traditional Google. Most agencies don't offer this yet.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Who does Favze work with?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze works with businesses at every stage  -  from local shops and service providers just getting started, to established brands looking to scale. Retail, health and wellness, medical practices, contractors, professional services, hospitality, food businesses, nonprofits, manufacturers, and more. There is no minimum spend. If you need real marketing, Favze can build a strategy around your goals and budget.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you only serve Northern Indiana and Michiana?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze is rooted in Northern Indiana and Michiana and specializes in this region's customers, search behavior, and competitive landscape. However, many services  -  SEO, AEO, GEO, email marketing, paid ads, website design  -  can serve businesses anywhere. If you're outside the region and curious whether Favze is a fit, <a href="/contact">reach out</a> and Riley will tell you honestly.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2: DM BASICS -->
+  <section class="faq-section" id="basics">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#064187" stroke-width="1.6"/><path d="M12 7v5.5M12 16v.1" stroke="#064187" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">02  -  Digital Marketing Basics</span>
+        <h2 class="section-title">The Fundamentals</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is digital marketing?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Digital marketing is how businesses attract, engage, and convert customers through online channels  -  search engines, social media, email, paid ads, and increasingly, AI platforms. It replaces or supplements traditional advertising (flyers, billboards, print) with measurable, targeted strategies that reach people where they actually spend their time: on their phones and computers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why is digital marketing important today?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Because that is where your customers are making decisions. Studies show the average consumer uses <strong>5.8 different sources</strong> before making a purchase  -  search engines, social media, reviews, maps, and increasingly AI tools. If your business doesn't show up across those channels, a competitor does. Digital marketing is how you stay visible at every step of that journey.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What services does my business actually need?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">That depends entirely on your goals, your current visibility, and how customers find businesses like yours. A new restaurant needs Local SEO and Google Business Profile. A contractor needs map pack visibility and reviews. An e-commerce brand needs paid ads and email. Favze builds a custom recommendation based on your specific situation  -  not a package that fits every business the same.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is digital marketing worth it for small businesses?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  and for small businesses especially. Digital marketing levels the playing field. A well-optimized Google Business Profile and Local SEO strategy can put a small local shop above big-box competitors in map searches. Targeted paid ads let you compete with larger brands at a fraction of the cost of traditional advertising. The key is building the right strategy for your budget, not the biggest strategy available.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3: SERVICES -->
+  <section class="faq-section" id="services">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="#0A89A3" stroke-width="1.5"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="#0A89A3" stroke-width="1.5"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="#0A89A3" stroke-width="1.5"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="#0A89A3" stroke-width="1.5"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">03  -  Services We Offer</span>
+        <h2 class="section-title">What Favze Does</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What services does Favze offer?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze offers 12 full-service digital marketing services: <strong>Social Media Marketing, SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Optimization, Local SEO, Email Marketing, SMS Marketing, Paid Search Ads (SEM), Paid Social Ads, HubSpot CRM Setup, and Website Design</strong>. Every service can be used standalone or combined into a coordinated multi-channel strategy.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the difference between SEO, AEO, and GEO?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><strong>SEO (Search Engine Optimization)</strong> gets your website ranked higher on Google and Bing. <strong>AEO (Answer Engine Optimization)</strong> optimizes your content to appear in AI-generated answers  -  like when someone asks Google AI Overview or ChatGPT for a recommendation. <strong>GEO (Generative Engine Optimization)</strong> is the broader discipline of making your brand recommended and cited by generative AI tools like Gemini, Perplexity, Copilot, and Grok. Today, you need all three to be fully visible.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is social media marketing and what does Favze do differently?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Social media marketing is using platforms like Facebook, Instagram, and LinkedIn to build brand awareness, engage your audience, and drive customers. Most businesses post consistently and see little return. That's because <strong>posting is not strategy</strong>. Favze builds social systems with audience targeting, funnel mapping, and conversion intent  -  so attention actually turns into revenue, not just likes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is paid advertising and how does it work?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Paid advertising means paying to put your business in front of customers who are actively searching (Google Ads / Paid Search) or matching your ideal buyer profile (Facebook, Instagram / Paid Social). Unlike organic strategies that take time, paid ads can generate visibility and leads quickly. The key is targeting precision, landing page alignment, and conversion tracking  -  without these, your budget evaporates without results.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Does Favze build websites?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes. Favze's website design service focuses on conversion architecture  -  not just a site that looks good, but one that supports SEO, paid traffic, AI visibility, and buyer psychology simultaneously. A website that just "looks fine" but doesn't rank, doesn't load fast, or doesn't push visitors toward action is a liability, not an asset.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4: STRATEGY -->
+  <section class="faq-section" id="strategy">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 18l5-7 4 5 4-9 5 11" stroke="#064187" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">04  -  Strategy &amp; Planning</span>
+        <h2 class="section-title">Your Roadmap</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What marketing strategy is best for my business?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">There's no universal answer  -  and any agency that gives you one without learning about your business first is guessing. The right strategy depends on your goals, your industry, your current visibility, how your customers make decisions, and your budget. Favze starts every relationship with a free consultation specifically to answer this question for your situation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Should I start with SEO, ads, or social media?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">A general rule: if you need customers now, paid ads give the fastest results. If you want sustainable, compounding visibility over time, SEO is the foundation. Social media builds brand awareness and validation. In most cases, the best answer is a coordinated combination  -  not one channel in isolation. Local SEO plus Google Business Profile is often the highest-ROI starting point for local service businesses.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How does Favze create a custom strategy?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">After your free consultation, Riley audits your current visibility, competitive landscape, and customer behavior in your specific market. From there, Favze builds a strategy proposal that identifies the right channels, sets measurable goals, and maps out a clear plan with transparent pricing  -  no cookie-cutter packages, no assumptions about what you need.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer personalized marketing plans?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">That is all Favze offers. Every strategy is built around your goals, your audience, and your competitive landscape. Favze does not sell packages  -  it builds plans. Nothing generic ever leaves the agency.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5: LEAD GEN -->
+  <section class="faq-section" id="leads">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C8.13 3 5 6.13 5 10c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#0A89A3" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="#0A89A3" stroke-width="1.4"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">05  -  Lead Generation &amp; Growth</span>
+        <h2 class="section-title">Getting Customers</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How will Favze help me get more customers?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">By making your business the most visible, most trusted, and most recommended option in your market  -  across every channel your customers use. That means search engines, maps, AI platforms, social, email, and paid ads, all working together. More visibility across more touchpoints means more people find you, trust you, and choose you before they even call your competitor.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do you generate leads online?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Lead generation online works by getting in front of customers who are already looking for what you offer (search and map optimization) or matching your ideal customer profile (targeted paid ads), then converting that attention into action through optimized landing pages, compelling offers, clear calls to action, and follow-up systems like email and SMS automation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why is my business not getting leads from marketing?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Usually one of four reasons: <strong>you're not visible enough</strong> (people can't find you), <strong>your message isn't landing</strong> (people see you but aren't compelled), <strong>your conversion path is broken</strong> (website doesn't turn visitors into leads), or <strong>you're on the wrong channel</strong> (you're investing where your customers aren't). Favze audits which of these is true for your business before recommending anything.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the fastest way to grow my business online?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">The fastest results typically come from paid search and local service ads  -  they put you in front of people actively searching for what you offer right now. But "fastest" and "best long-term" aren't always the same. Favze pairs fast-start channels with foundation-building strategies like SEO and GEO so your growth is sustainable, not dependent on ongoing ad spend forever.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6: RESULTS & ROI -->
+  <section class="faq-section" id="results">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19l5-7 4 5 4-9 5 11" stroke="#064187" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">06  -  Results, ROI &amp; Expectations</span>
+        <h2 class="section-title">What to Expect</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long does it take to see results from digital marketing?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">It depends on the channel, your market, your competition, and your starting point  -  which is exactly why Favze builds a custom strategy for every business rather than making blanket promises. <strong>Paid ads</strong> can generate results faster than organic channels because you're paying for immediate placement. <strong>SEO and Local SEO</strong> build authority over time  -  search engines reward consistency, not shortcuts. <strong>AEO and GEO</strong> depend on how well your brand is already established online. <strong>Email and SMS</strong> work as fast as your existing audience allows. Riley will give you an honest picture of what to expect for your specific situation during the free consultation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What kind of results can I expect?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze doesn't make generic promises like "rank #1 on Google" because those claims are meaningless without context. What Favze commits to: a custom strategy built around measurable goals, transparent reporting you can actually track, and continuous optimization based on what the data shows. Results depend on your market, your budget, your competition, and your starting point  -  and Favze will be honest with you about all of it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do you measure success?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Success is measured against the goals you set at the start  -  more leads, more website traffic, more map visibility, better conversion rates, higher return on ad spend. Favze tracks what matters to your business, not vanity metrics like social followers or impressions that don't translate to revenue.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I know if my marketing is actually working?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Through Favze's plain-language reporting. Every report explains what happened, why it matters, and what changes are being made. You won't need an agency to translate it for you. If a channel is working, you'll see it clearly. If something needs adjustment, Riley will tell you directly  -  and tell you what's being done about it.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7: PRICING -->
+  <section class="faq-section" id="pricing">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#0A89A3" stroke-width="1.6"/><path d="M12 7v10M9 9.5h4.5a1.5 1.5 0 110 3H9.5a1.5 1.5 0 100 3H15" stroke="#0A89A3" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">07  -  Pricing &amp; Budget</span>
+        <h2 class="section-title">What It Costs</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How much does digital marketing cost?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">At Favze, pricing is built around your specific strategy  -  not fixed packages. That means you pay for what your business actually needs, not for services bundled in to justify a price tier. During the free consultation, Riley explains exactly what each component of your strategy will cost, with no surprises afterward. There are no hidden fees. What you see is what you pay.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What's a good starting budget for digital marketing?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">It depends on your goals and channels. Local SEO and Google Business Profile optimization have a lower cost of entry and high ROI for local businesses. Paid ads require an ongoing ad budget in addition to management costs. Email and SMS marketing are typically very cost-efficient for customer retention. Favze will give you honest recommendations for what budget makes sense for your situation  -  not upsell you on more than you need.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can small businesses afford Favze's services?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  and this is specifically why Favze was built. Big agency pricing and rigid packages price out the businesses that need marketing help most. Favze's custom approach means strategies are built around your actual budget. There is no minimum spend to work with Favze.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is digital marketing an expense or an investment?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Done right, it's an investment with a measurable return. Done wrong  -  through agencies with no accountability, generic strategies, and no tracking  -  it's an expense. The difference is a strategy built around clear goals, honest pricing, and real reporting that shows you whether the spend is generating returns. That's what Favze is built to deliver.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8: LOCAL SEO -->
+  <section class="faq-section" id="local">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#064187" stroke-width="1.6" fill="rgba(6,65,135,.2)"/><circle cx="12" cy="9" r="2.5" fill="#064187"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">08  -  Local SEO &amp; Regional Growth</span>
+        <h2 class="section-title">Owning Your Market</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do you help local businesses rank on Google?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Through a combination of technical SEO, content strategy, Google Business Profile optimization, local citation building, and review velocity. Google's local algorithm is more technical than most businesses realize  -  category signals, proximity weighting, structured data, and review patterns all factor in. Favze builds the full system, not just the surface-level fixes most agencies deliver.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is Local SEO and why does it matter?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Local SEO is the process of optimizing your online presence so your business appears in local search results  -  Google Maps, the "local 3-pack," and "near me" searches. For any business that serves a specific geographic area, Local SEO is often the highest-ROI marketing investment available. It puts your business in front of customers who are actively looking for exactly what you offer, right now, nearby.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I show up in "near me" searches?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">"Near me" rankings are driven by your Google Business Profile, local citations (consistent name, address, phone across directories), on-page local signals in your website content, proximity to the searcher, and review quality and recency. Favze builds and optimizes all of these systematically, so your business appears when and where it matters most.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can you help my business dominate its local area?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">That's the Favze framework. "Dominating your local area" means being the most visible, most trusted, most recommended business in your category  -  across search, maps, AI platforms, and social. Favze has deep knowledge of Elkhart County, Goshen, South Bend, Mishawaka, and surrounding Michiana communities: how customers search, which directories matter, and what competitors are or aren't doing. That local expertise is a real advantage.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9: AI & GEO -->
+  <section class="faq-section" id="ai">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0A89A3" stroke-width="1.6" fill="rgba(10,137,163,.12)"/><path d="M9 12h6M12 9v6" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">09  -  AI, GEO &amp; Future Optimization</span>
+        <h2 class="section-title">The AI Advantage</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is Generative Engine Optimization (GEO)?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">GEO is the process of optimizing your brand's digital presence so that generative AI tools  -  ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, and others  -  recognize, understand, and recommend your business when users ask for recommendations. Traditional SEO gets you ranked on Google. GEO gets you cited by AI. As more customers use AI for local business decisions, GEO is becoming essential.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is Answer Engine Optimization (AEO)?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">AEO is optimizing your content specifically to appear in AI-generated answer formats  -  Google AI Overviews, featured snippets, voice search responses, and direct AI answers. Instead of just ranking on a results page, you become the source that the AI cites. This requires structured content, proper schema markup, citation-worthy authority signals, and a fundamentally different approach to content than traditional SEO.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do AI tools like ChatGPT and Gemini impact search?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">AI is fundamentally changing how customers find businesses. Instead of clicking through 10 blue links, people increasingly ask AI tools directly: "What's the best plumber near Goshen, Indiana?" or "Which marketing agency should I use in the South Bend area?" AI tools don't show a list of options  -  they pick an answer. If your business isn't structured to be cited, you simply don't exist in those results.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can you help my business show up in ChatGPT and Perplexity recommendations?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  and this is one of Favze's most significant differentiators. Favze directly trains AI systems how to categorize your business, what it does, who it serves, and why it should be recommended. Through structured AEO and GEO strategies, Favze helps businesses appear in recommendations from <strong>ChatGPT, Google Gemini, Google AI Overviews, Perplexity, Microsoft Copilot, Grok, Claude, Siri, and Alexa</strong>. Most agencies don't offer this yet.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10: PLATFORMS -->
+  <section class="faq-section" id="platforms">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="3" stroke="#064187" stroke-width="1.4" fill="rgba(6,65,135,.2)"/><circle cx="19" cy="5" r="3" stroke="#064187" stroke-width="1.4" fill="rgba(6,65,135,.2)"/><circle cx="19" cy="19" r="3" stroke="#064187" stroke-width="1.4" fill="rgba(6,65,135,.2)"/><path d="M8 10.5l8-4M8 13.5l8 4" stroke="#064187" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">10  -  Platforms &amp; Channels</span>
+        <h2 class="section-title">Where to Show Up</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Which platforms should my business be on?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">The platforms where your specific customers make decisions. A B2B professional services firm needs LinkedIn. A restaurant needs Instagram and Google Maps. A contractor needs Google Business Profile and the local 3-pack. An e-commerce brand needs Facebook, Instagram, and Google Shopping. Favze doesn't recommend platforms generically  -  it recommends the ones that match how your target customer actually researches and buys.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Should I focus on Google or social media first?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">For most local businesses, <strong>Google first</strong>. People who search Google for your services are in buying mode  -  they're ready to act. Social media builds awareness and brand trust over time, but it captures people before they're actively searching. A strategy that covers both  -  search intent through Google and SEO, brand trust through social  -  outperforms either alone.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is email marketing still effective?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  email consistently delivers the highest ROI of any digital channel when done correctly. The key distinction is that sending blasts does not equal email marketing. Effective email requires list segmentation, behavioral automation, lifecycle sequences, and personalization. Businesses that have "tried email" and seen nothing usually haven't built the system  -  they've just been hitting send.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I need to be on every platform?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">No. Being present on every platform and doing none of them well is worse than being excellent on two or three. Favze identifies the channels where your investment will generate the highest return and builds depth there first  -  then expands strategically. Spreading your budget thin across every platform is one of the most common and costly mistakes businesses make.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11: PROBLEMS & MISTAKES -->
+  <section class="faq-section" id="problems">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17v.1" stroke="#0A89A3" stroke-width="1.8" stroke-linecap="round"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#0A89A3" stroke-width="1.5"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">11  -  Common Problems &amp; Mistakes</span>
+        <h2 class="section-title">What Goes Wrong</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why isn't my marketing working?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">In most cases: wrong channels, wrong message, no tracking, or a broken conversion path. Marketing can fail at any stage  -  getting visible, compelling people to act, or converting them once they arrive. Without clear attribution tracking, you won't know where it's breaking down. Favze diagnoses the actual problem before recommending solutions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why isn't my website converting visitors into leads?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">A website that doesn't convert typically has one or more of these problems: unclear or weak calls to action, slow load time, poor mobile experience, messaging that doesn't match what visitors searched for, or a trust gap (no reviews, no credentials, no proof). Design without conversion architecture fails. Favze builds sites that are engineered to convert, not just look good.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What are the biggest marketing mistakes businesses make?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">The most common: <strong>posting on social without a strategy</strong>, <strong>running ads without conversion tracking</strong>, <strong>neglecting Google Business Profile</strong>, <strong>using a cookie-cutter agency that doesn't know your market</strong>, <strong>spreading budget across too many channels too early</strong>, and <strong>treating marketing as an expense instead of tracking ROI</strong>. Most are fixable  -  once you know where the problem is.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">We tried digital marketing before and it didn't work. Why would Favze be different?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Usually past marketing failed because of one or more of these reasons: the strategy wasn't built for your specific market, the agency didn't track results honestly, you were sold a generic package, or there was no consistent accountability. Favze is different because: every strategy is custom, every cost is transparent upfront, and Riley is directly accountable for the results  -  not a rotating account team with no stake in your success.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12: PROCESS -->
+  <section class="faq-section" id="process">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#064187" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="#064187" stroke-width="1.5"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">12  -  Process &amp; Workflow</span>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What happens after I sign up with Favze?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">After your free consultation and strategy approval, onboarding begins  -  access credentials are collected, accounts are set up or audited, and campaigns are built before anything goes live. Nothing launches until you've reviewed and approved it. The entire process is explained step by step, and you're never kept in the dark about what's happening or why.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long does onboarding take?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Onboarding depends entirely on which services are being set up, the complexity of your existing accounts, and how much groundwork needs to be done before anything launches. Every business is different  -  a straightforward campaign setup looks nothing like a full website build or a HubSpot implementation. Favze will always give you a realistic timeline based on your actual situation, not a generic estimate designed to close the deal. Nothing goes live until you have reviewed and approved it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How often will we communicate?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze builds communication schedules around your preferences. Regular reporting, check-ins, and strategy updates are standard. If something important changes  -  a platform update, a competitor move, an optimization opportunity  -  Riley communicates proactively, not reactively. You will never have to chase your agency for updates.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I get reports and performance updates?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  and they're written in plain language, not agency jargon. Every Favze report tells you what happened, what the numbers mean for your business, and what adjustments are being made. No dashboards designed to confuse you into thinking you need the agency to interpret them for you. You should always understand exactly what is happening with your marketing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13: TRUST & CONTRACTS -->
+  <section class="faq-section" id="trust">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7L12 2z" stroke="#0A89A3" stroke-width="1.5" fill="rgba(10,137,163,.12)"/><path d="M8 12l3 3 5-6" stroke="#0A89A3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">13  -  Trust, Contracts &amp; Risk</span>
+        <h2 class="section-title">Zero Risk</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Are there long-term contracts?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze does not lock businesses into contracts designed to trap them regardless of performance. Contract terms are discussed openly during the consultation and clearly explained before anything is signed. Some services have recommended minimum timeframes to produce results (SEO, for example, takes months to build authority)  -  but those timeframes are explained honestly, not buried in fine print.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What if I'm not happy with the results?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Riley will tell you directly. If a strategy isn't generating the expected results, Favze diagnoses why and adjusts  -  not deflects. You will always know what is happening and why. If there's a genuine issue, it will be addressed head-on. Favze's reputation depends on your results, not just your monthly payment.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I own my website and marketing data?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes. Your website, your Google accounts, your ad accounts, your email lists  -  all of it belongs to you. Favze never holds your assets hostage. This is a non-negotiable principle. Every account is set up with you as the owner, with Favze having managed access only. You can always take your assets and walk away, no strings attached.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Are there really zero hidden fees?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes. Every cost, every service, and every decision is explained clearly in plain language before you commit to anything. No add-ons that appear after you sign. No monthly fees buried in fine print. No surprise charges at renewal. What you see is what you pay. That is a hard line, not a marketing claim. If you ever have a question about a charge, Riley will explain it instantly  -  because every cost was discussed upfront.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14: WHY FAVZE -->
+  <section class="faq-section" id="whyfavze">
+    <div class="section-header">
+      <div class="section-icon navy-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 5.5L20 8.6l-4 3.9.95 5.5L12 15.4l-4.95 2.6.95-5.5L4 8.6l5.5-.1z" stroke="#064187" stroke-width="1.5" stroke-linejoin="round" fill="rgba(6,65,135,.2)"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">14  -  Why Favze</span>
+        <h2 class="section-title">The Decision</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why should I choose Favze over a bigger, more established agency?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Bigger agencies assign rotating account reps who don't know your market, use rigid packages that don't fit your goals, and charge fees that prioritize their revenue over your results. Favze gives you <strong>direct access to a certified strategist</strong> who knows Northern Indiana, a <strong>custom strategy</strong> built around your specific business, <strong>zero hidden fees</strong>, and <strong>AI-ready marketing</strong> most agencies haven't built yet. The person who builds your strategy is the same person running it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What makes Favze's approach genuinely different?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Three things most agencies don't offer: <strong>real local expertise</strong> (deep knowledge of how Northern Indiana customers search and decide), <strong>AI-first visibility</strong> (GEO and AEO optimization for ChatGPT, Gemini, and other AI tools), and <strong>founder-led accountability</strong> (Riley Catalano is directly responsible for your strategy and results  -  not a layer of account managers). These aren't marketing claims. They're structural differences in how Favze operates.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How is Favze ahead of other marketing agencies?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Most agencies are still optimizing for how people used to search  -  chasing Google rankings, social media followers, and display ads in isolation. Favze is built for how customers actually make decisions now and into the future: AI-driven search, answer engine visibility, generative AI citations, voice search, and coordinated multi-channel discovery. The agencies that don't adapt will leave their clients invisible where the next generation of customers is already looking.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why does local expertise matter when hiring a marketing agency?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Because local search behavior is highly specific. The keywords people use in Elkhart County are different from what they search in Indianapolis. The directories that matter for Goshen citations are not the same as national SEO. Which competitors you're actually fighting for map positions, what reviews say in your community, how local media coverage affects AI citations  -  these are things a national agency guesses and a local agency knows. Favze knows this market.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15: GET STARTED -->
+  <section class="faq-section" id="start">
+    <div class="section-header">
+      <div class="section-icon teal-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#0A89A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="section-meta">
+        <span class="section-num">15  -  Getting Started</span>
+        <h2 class="section-title">Your Next Step</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I get started with Favze?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Book a free consultation at <a href="/contact">favze.com/contact</a> or call Riley directly at <a href="tel:+15747475012">574-747-5012</a>. That's it. No forms to fill out, no questionnaires to complete before you can talk to a human. Just a real conversation about your business and what you need.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is the consultation really free with no obligation?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes  -  completely free, zero obligation. The consultation is a real conversation about your business, your goals, and your frustrations. Riley will give you honest insight into what you actually need, even if the answer is something Favze doesn't offer. There is no pitch at the end. If you decide Favze isn't the right fit, that's a good outcome too.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How quickly can marketing campaigns begin?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">After the consultation and strategy approval, onboarding begins and builds toward launch  -  but the timeline depends completely on your business, the services involved, and what needs to be built or set up. Favze never rushes a build to hit an arbitrary start date, because a campaign launched correctly always outperforms one that was forced out the door before it was ready. Riley will give you a clear, honest picture of what the timeline looks like for your specific situation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What do you need from me to start?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">To start, just your time for the consultation. Afterward, onboarding typically requires access to your Google account, any existing ad accounts, your website, and whatever marketing platforms you're currently using. Favze will walk you through exactly what's needed, step by step. Nothing is assumed. Nothing is taken without your knowledge or approval.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-inner">
+    <h2>Still Have Questions?</h2>
+    <p>Book a free consultation and Riley will answer everything directly  -  no pitch, no obligation, just a real conversation about your business and what it actually needs.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-white">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/services" class="btn-ghost-white">Explore All 12 Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
+          <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" style="height:26px;width:auto;" onerror="this.style.display='none'">
+        </div>
+        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="/search-engine-optimization">SEO</a></li>
+          <li><a href="/answer-engine-optimization">AEO</a></li>
+          <li><a href="/generative-engine-optimization">GEO</a></li>
+          <li><a href="/ai-optimization">AI Optimization</a></li>
+          <li><a href="/local-seo">Local SEO</a></li>
+          <li><a href="/email-marketing">Email Marketing</a></li>
+          <li><a href="/paid-search-ads-sem">Paid Search Ads</a></li>
+          <li><a href="/website-design">Website Design</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">All Services</a></li>
+          <li><a href="/digital-marketing-faq">FAQ</a></li>
+          <li><a href="/favze-insights">Articles</a></li>
+          <li><a href="/areas-served">Areas Served</a></li>
+        </ul>
+        <div style="margin-top:20px">
+          <h4>Contact</h4>
+          <div class="fcon">
+            <a href="/cdn-cgi/l/email-protection#89fbe0e5ecf0c9efe8fff3eca7eae6e4"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> <span class="__cf_email__" data-cfemail="92e0fbfef7ebd2f4f3e4e8f7bcf1fdff">[email&#160;protected]</span></a>
+            <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg> 574-747-5012</a>
+            <a href="/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg> Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fb-bot">
+      <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.addEventListener('DOMContentLoaded',function(){
+  var hb=document.getElementById('hb'),mm=document.getElementById('mm');
+  if(hb&&mm){
+    hb.addEventListener('click',function(){var o=!mm.classList.contains('open');mm.classList.toggle('open',o);hb.classList.toggle('open',o)});
+    mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');hb.classList.remove('open')})});
+  }
+
+  // Accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn=item.querySelector('.faq-q'),ans=item.querySelector('.faq-a');
+    if(!btn||!ans)return;
+    btn.addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-a').classList.remove('show');
+        i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!open){item.classList.add('open');ans.classList.add('show');btn.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  // Category nav scroll + active
+  function getStickyOffset(){
+    var mainNav=document.querySelector('nav');
+    var catNav=document.querySelector('.cat-nav');
+    var h1=mainNav?mainNav.offsetHeight:68;
+    var h2=catNav?catNav.offsetHeight:49;
+    return h1+h2+12;
+  }
+  var catBtns=document.querySelectorAll('.cat-btn');
+  catBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var target=document.getElementById(btn.dataset.target);
+      if(target){
+        var offset=getStickyOffset();
+        var top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+        window.scrollTo({top:top,behavior:'smooth'});
+      }
+      catBtns.forEach(function(b){b.classList.remove('active')});
+      btn.classList.add('active');
+    });
+  });
+
+  // Update active cat on scroll
+  var sections=document.querySelectorAll('.faq-section');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id=entry.target.id;
+        catBtns.forEach(function(b){b.classList.toggle('active',b.dataset.target===id)});
+        // scroll active cat button into view in the nav bar
+        var activeBtn=document.querySelector('.cat-btn.active');
+        if(activeBtn){activeBtn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}
+      }
+    });
+  },{threshold:0.15,rootMargin:'-130px 0px -55% 0px'});
+  sections.forEach(function(s){observer.observe(s)});
+
+  // ---- QUESTION MACHINE ----
+  var qmData=[
+    {
+      q:"WHY ISN'T MY MARKETING WORKING",
+      a:"Usually one of four things: you're not visible, your message isn't landing, your site doesn't convert, or you're on the wrong channel. Favze finds which one before recommending anything.",
+      tag:"Marketing"
+    },
+    {
+      q:"DOES FAVZE HAVE ZERO HIDDEN FEES",
+      a:"Yes. Every cost is explained clearly before you commit. No add-ons after you sign. No surprise charges. What you see is exactly what you pay.",
+      tag:"Pricing"
+    },
+    {
+      q:"WILL MY BUSINESS SHOW UP IN CHATGPT",
+      a:"It can. Favze directly trains AI systems to recognize and recommend your business across ChatGPT, Gemini, Perplexity, and more.",
+      tag:"AI Search"
+    },
+    {
+      q:"HOW DO I SHOW UP IN NEAR ME SEARCHES",
+      a:"Through Google Business Profile optimization, local citations, review velocity, and on-page local signals. Favze builds the full system.",
+      tag:"Local SEO"
+    },
+    {
+      q:"HOW DO I GET STARTED WITH FAVZE",
+      a:"Book a free consultation. No forms, no pitch. Riley answers your questions directly and builds a strategy around your actual goals.",
+      tag:"Getting Started"
+    }
+  ];
+
+  var qmIdx=0;
+  var qmTyping=false;
+  var qmTimer=null;
+  var qmAutoTimer=null;
+
+  function qmSetActive(i){
+    qmIdx=i;
+    document.querySelectorAll('.qm-pdot').forEach(function(d){d.classList.toggle('active',parseInt(d.dataset.i)===i)});
+    document.querySelectorAll('.qm-tag').forEach(function(t){t.classList.toggle('active',parseInt(t.dataset.i)===i)});
+  }
+
+  function qmType(text,el,cb){
+    if(qmTyping){clearTimeout(qmTimer);}
+    qmTyping=true;
+    el.innerHTML='<span class="qm-cursor"></span>';
+    var i=0;
+    function step(){
+      if(i<=text.length){
+        el.innerHTML=text.slice(0,i)+'<span class="qm-cursor"></span>';
+        i++;
+        qmTimer=setTimeout(step,i===1?0:38);
+      } else {
+        qmTyping=false;
+        if(cb)cb();
+      }
+    }
+    step();
+  }
+
+  function qmShow(i,skipType){
+    clearTimeout(qmAutoTimer);
+    qmSetActive(i);
+    var data=qmData[i];
+    var aEl=document.getElementById('qm-a');
+    aEl.classList.add('fading');
+    if(skipType){
+      document.getElementById('qm-q').innerHTML=data.q+'<span class="qm-cursor"></span>';
+      setTimeout(function(){aEl.textContent=data.a;aEl.classList.remove('fading');},150);
+    } else {
+      qmType(data.q,document.getElementById('qm-q'),function(){
+        setTimeout(function(){aEl.textContent=data.a;aEl.classList.remove('fading');},300);
+      });
+    }
+    qmAutoTimer=setTimeout(function(){qmShow((i+1)%qmData.length,false);},6200);
+  }
+
+  // Kick off
+  qmShow(0,true);
+
+  // Skip button
+  var skipBtn=document.getElementById('qm-skip');
+  if(skipBtn){
+    skipBtn.addEventListener('click',function(){
+      clearTimeout(qmTimer);clearTimeout(qmAutoTimer);qmTyping=false;
+      qmShow((qmIdx+1)%qmData.length,false);
+    });
+  }
+
+  // Tag clicks
+  document.querySelectorAll('.qm-tag').forEach(function(t){
+    t.addEventListener('click',function(){
+      clearTimeout(qmTimer);clearTimeout(qmAutoTimer);qmTyping=false;
+      qmShow(parseInt(t.dataset.i),false);
+    });
+  });
+
+  // Dot clicks
+  document.querySelectorAll('.qm-pdot').forEach(function(d){
+    d.addEventListener('click',function(){
+      clearTimeout(qmTimer);clearTimeout(qmAutoTimer);qmTyping=false;
+      qmShow(parseInt(d.dataset.i),false);
+    });
+  });
+});
+</script>
+</body>
+</html>
