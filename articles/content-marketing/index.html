@@ -289,14 +289,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
   <a href="/contact" class="mc">Start Free Consultation</a>
 </div>
 
-<div class="breadcrumb-bar">
-  <nav class="breadcrumb-inner" aria-label="Breadcrumb">
-    <a href="/">Home</a><span class="bc-sep">›</span>
-    <a href="/articles">Articles</a><span class="bc-sep">›</span>
-    <span class="bc-current">Content Marketing</span>
-  </nav>
-</div>
-
 <section class="pillar-hero">
   <div class="pillar-hero-inner">
     <div class="pillar-badge">Pillar 01 — Content Marketing</div>
@@ -671,7 +663,7 @@ var THIS_PILLAR = 'content-marketing';
 var allArticles = [];
 
 // Fetch from articles.json — two levels up from /articles/content-marketing/
-fetch('/articles.json')
+fetch('/favze/articles.json')
   .then(function(r){return r.json();})
   .then(function(data){allArticles=data;init();})
   .catch(function(){allArticles=[];init();});
