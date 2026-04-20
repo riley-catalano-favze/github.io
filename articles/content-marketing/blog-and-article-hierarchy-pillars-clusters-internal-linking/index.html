@@ -676,7 +676,7 @@ var THIS_SLUG='blog-and-article-hierarchy-pillars-clusters-internal-linking';
 var allArticles=[];
 
 // Three levels up from /articles/content-marketing/[slug]/
-fetch('/articles.json')
+fetch('/favze/articles.json')
   .then(function(r){return r.json();})
   .then(function(data){allArticles=data;init();})
   .catch(function(){allArticles=[];init();});
