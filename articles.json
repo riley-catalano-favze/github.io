@@ -22,5 +22,17 @@
     "date": "2025-02-01",
     "slug": "how-to-create-evergreen-content",
     "featured": false
+  },
+  {
+    "id": "content-repurposing-mastery-ai-era",
+    "title": "Content Repurposing Mastery: For the AI Era",
+    "description": "Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter — producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 20,
+    "author": "Riley Catalano",
+    "date": "2026-03-01",
+    "slug": "content-repurposing-mastery-ai-era",
+    "featured": false
   }
 ]
