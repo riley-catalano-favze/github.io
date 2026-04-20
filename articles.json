@@ -34,5 +34,29 @@
     "date": "2026-03-01",
     "slug": "content-repurposing-mastery-ai-era",
     "featured": false
+  },
+  {
+    "id": "what-makes-google-trust-a-website-content",
+    "title": "What Makes Google Trust a Website",
+    "description": "Google doesn't use a single trust score. It uses a complex, multi-layered system of signals — E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google's trust in your website and what destroys it.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 18,
+    "author": "Riley Catalano",
+    "date": "2026-03-22",
+    "slug": "what-makes-google-trust-a-website",
+    "featured": false
+  },
+  {
+    "id": "what-makes-google-trust-a-website-search",
+    "title": "What Makes Google Trust a Website",
+    "description": "Google doesn't use a single trust score. It uses a complex, multi-layered system of signals — E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google's trust in your website and what destroys it.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 18,
+    "author": "Riley Catalano",
+    "date": "2026-03-22",
+    "slug": "what-makes-google-trust-a-website",
+    "featured": true
   }
 ]
