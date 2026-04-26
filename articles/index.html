@@ -603,7 +603,10 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
 .ft-inner { max-width: var(--inner-max); margin: 0 auto; }
 .ft-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.09); }
 .fb-desc { font-size: 0.84rem; color: rgba(255,255,255,.42); line-height: 1.72; margin-top: 14px; max-width: 300px; }
-.ft-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+
+/* ── ONLY CHANGE: social icons now stack 3×3 ── */
+.ft-social { display: grid; grid-template-columns: repeat(3, 34px); gap: 8px; margin-top: 18px; }
+
 .ft-social a { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.45); transition: background .2s, color .2s; }
 .ft-social a:hover { background: var(--navy); color: #fff; }
 .fc h4 { font-weight: 900; font-size: 0.78rem; color: #fff; margin-bottom: 16px; letter-spacing: .09em; text-transform: uppercase; }
