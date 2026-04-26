@@ -1,1 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Consultation — Favze Digital Marketing | Northern Indiana</title>
+<meta name="description" content="Book your free digital marketing consultation with Riley at Favze. No pitch, no pressure, no contracts. Serving all of Northern Indiana and the Michiana region.">
+<link rel="canonical" href="https://favze.com/contact">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
 
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#064187;
+  --teal:#0A89A3;
+  --dark:#0a0a0a;
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --max:1200px;
+  color-scheme:light!important;
+}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--font-body);background:#fff!important;color:var(--dark)!important;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:var(--font-display);font-weight:900;font-size:1.5rem;color:var(--navy);letter-spacing:.04em}
+.nl{display:flex;align-items:center;gap:4px;list-style:none}
+.nl a{font-weight:500;font-size:.875rem;padding:7px 12px;border-radius:8px;color:var(--dark);transition:background .2s}
+.nl a:hover{background:#f0f0f0}
+.nc{background:var(--navy)!important;color:#fff!important;padding:9px 18px!important;border-radius:9px!important;font-weight:700!important}
+.nc:hover{background:var(--teal)!important}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
+.hb span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:.25s}
+.hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0}
+.hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:18px 5% 22px;z-index:199;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.mm.open{display:flex}
+.mm a{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:var(--dark)}
+.mc-mob{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important}
+
+/* HERO */
+.hero{background:var(--dark)!important;padding:72px 5% 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.hero-glow{position:absolute;top:-100px;right:-60px;width:540px;height:540px;background:radial-gradient(circle,rgba(6,65,135,.22) 0%,transparent 60%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-80px;left:-40px;width:380px;height:380px;background:radial-gradient(circle,rgba(10,137,163,.09) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(10,137,163,.18);border:1px solid rgba(10,137,163,.35);border-radius:100px;padding:5px 14px;margin-bottom:22px}
+.hero h1{font-family:var(--font-display);font-weight:900;line-height:.95;text-transform:uppercase;letter-spacing:-.02em;color:#fff!important;margin-bottom:18px}
+.hero h1 .line1{display:block;font-size:clamp(2.4rem,6vw,5.5rem)}
+.hero h1 .line2{display:block;font-size:clamp(1.9rem,4.5vw,4rem);color:var(--teal)!important}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.65)!important;line-height:1.75;max-width:580px;margin:0 auto 28px}
+.hero-sub strong{color:rgba(255,255,255,.92)!important;font-weight:600}
+.hero-pills{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.55);padding:6px 13px;border:1px solid rgba(255,255,255,.12);border-radius:100px;white-space:nowrap}
+.hero-pill::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+/* TRUST MARQUEE */
+.trust{background:#f4f6f9;overflow:hidden;border-top:1.5px solid #e4e8ee;border-bottom:1.5px solid #e4e8ee}
+.trust-track{display:flex;align-items:center;white-space:nowrap;animation:marquee 32s linear infinite;width:max-content}
+.trust-track:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.trust-pill{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-size:.8rem;font-weight:700;white-space:nowrap;border-right:1.5px solid #e4e8ee}
+.trust-pip{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tp-navy{color:var(--navy)}.tp-navy .trust-pip{background:var(--navy)}
+.tp-teal{color:var(--teal)}.tp-teal .trust-pip{background:var(--teal)}
+.tp-dark{color:#333}.tp-dark .trust-pip{background:#333}
+
+/* PAGE LAYOUT */
+.page{max-width:var(--max);margin:0 auto;padding:64px 5% 96px;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:start}
+
+/* LEFT */
+.section-eyebrow{display:flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.section-eyebrow::before{content:'';display:block;width:22px;height:2.5px;background:var(--teal);border-radius:2px;flex-shrink:0}
+.left-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;color:var(--dark);font-size:clamp(1.9rem,3.5vw,3rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:14px}
+.left-title em{font-style:normal;color:var(--teal)}
+.left-desc{font-size:.97rem;color:#555;line-height:1.82;max-width:500px;margin-bottom:36px}
+
+.expect-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
+.expect-item{background:#f7f9fc;border:1.5px solid #ebebeb;border-radius:12px;padding:18px 16px;display:flex;gap:11px;align-items:flex-start;transition:border-color .2s}
+.expect-item:hover{border-color:rgba(10,137,163,.3)}
+.ei-num{font-family:var(--font-display);font-weight:900;font-size:1.7rem;color:#dce8f0;line-height:1;flex-shrink:0;width:30px;text-align:right}
+.ei-title{font-family:var(--font-display);font-weight:900;font-size:.9rem;text-transform:uppercase;color:var(--dark);letter-spacing:.02em;margin-bottom:4px}
+.ei-desc{font-size:.79rem;color:#666;line-height:1.6}
+
+.proof-strip{background:var(--dark)!important;border-radius:14px;padding:20px 22px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:36px}
+.ps-item{display:flex;align-items:center;gap:9px}
+.ps-icon{width:32px;height:32px;border-radius:8px;background:rgba(10,137,163,.2);border:1px solid rgba(10,137,163,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal)}
+.ps-text{font-size:.81rem;color:rgba(255,255,255,.72)!important;line-height:1.4}
+.ps-text strong{color:#fff!important;font-weight:700}
+.ps-sep{width:1px;height:30px;background:rgba(255,255,255,.1);flex-shrink:0}
+
+.alt-title{font-family:var(--font-display);font-weight:900;font-size:1.3rem;text-transform:uppercase;color:var(--dark);margin-bottom:16px}
+.alt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.alt-item{background:#f7f9fc;border:1.5px solid #ebebeb;border-radius:12px;padding:16px 14px;text-align:center;transition:border-color .2s,box-shadow .2s}
+.alt-item:hover{border-color:rgba(10,137,163,.3);box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.alt-icon{width:36px;height:36px;border-radius:10px;background:rgba(10,137,163,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 9px;color:var(--teal)}
+.alt-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#bbb;margin-bottom:4px}
+.alt-val{font-size:.85rem;font-weight:600;color:var(--teal)}
+.alt-val a{color:var(--teal)}
+
+/* FORM CARD */
+.form-card{background:#fff;border:1.5px solid #e4e8ee;border-radius:20px;padding:32px 28px;box-shadow:0 8px 40px rgba(0,0,0,.07);position:sticky;top:88px;overflow:hidden}
+.fc-lbl{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block}
+.fc-title{font-family:var(--font-display);font-weight:900;font-size:1.5rem;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:6px}
+.fc-sub{font-size:.82rem;color:#777;line-height:1.65;margin-bottom:20px;padding-bottom:18px;border-bottom:1.5px solid #f0f0f0}
+
+/* Tally bleed to card edges */
+.tally-wrap{margin:0 -28px -32px;border-top:1.5px solid #f0f0f0}
+.tally-wrap iframe{display:block;width:100%;border:none}
+
+/* FOOTER */
+footer{background:var(--dark)!important;padding:56px 5% 0;border-top:1px solid rgba(255,255,255,.07)}
+.ft-inner{max-width:var(--max);margin:0 auto}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
+.fb-desc{font-size:.84rem;color:rgba(255,255,255,.5)!important;line-height:1.72;margin-top:14px;max-width:300px}
+.ft-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.ft-social a{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45)!important;transition:background .2s,color .2s}
+.ft-social a:hover{background:var(--navy);color:#fff!important}
+.fc-col h4{font-weight:900;font-size:.78rem;color:#fff!important;margin-bottom:16px;letter-spacing:.09em;text-transform:uppercase}
+.fc-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc-col ul li a{font-size:.83rem;color:rgba(255,255,255,.5)!important;transition:color .2s}
+.fc-col ul li a:hover{color:#fff!important}
+.fcon{display:flex;flex-direction:column;gap:9px}
+.fcon a{font-size:.83rem;color:rgba(255,255,255,.5)!important;display:flex;align-items:center;gap:7px;transition:color .2s}
+.fcon a:hover{color:#fff!important}
+.ft-serving-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:13px 0}
+.ft-si{max-width:var(--max);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.ft-sl{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--teal)!important;white-space:nowrap}
+.ft-slocs{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ft-slocs a{font-size:.78rem;color:rgba(255,255,255,.5)!important;white-space:nowrap;transition:color .2s}
+.ft-slocs a:hover{color:rgba(255,255,255,.85)!important}
+.ft-sdot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.18);flex-shrink:0;display:inline-block}
+.fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.fb-bot p{font-size:.78rem;color:rgba(255,255,255,.3)!important}
+.fb-bot a{color:rgba(255,255,255,.35)!important;font-size:.78rem;transition:color .2s}
+.fb-bot a:hover{color:#fff!important}
+
+/* ── RESPONSIVE ── */
+
+/* Tablet: stack to single column */
+@media(max-width:1024px){
+  .page{
+    grid-template-columns:1fr;
+    padding:52px 5% 80px;
+    gap:0;
+  }
+  .form-card{
+    position:static;
+    margin-top:48px;
+  }
+  .ft-top{grid-template-columns:1fr;gap:28px}
+}
+
+/* Mobile landscape ~600-768px */
+@media(max-width:768px){
+  .nl{display:none}
+  .hb{display:flex}
+  .hero{padding:52px 5% 44px}
+  .page{padding:44px 5% 64px}
+  .proof-strip{gap:12px}
+  .ps-sep{display:none}
+  .form-card{margin-top:40px;padding:24px 20px}
+  .tally-wrap{margin:0 -20px -24px}
+  .ft-si{flex-direction:column;align-items:flex-start;gap:10px}
+}
+
+/* Mobile portrait ≤600px */
+@media(max-width:600px){
+  nav{padding:0 4%}
+  .hero{padding:44px 4% 36px}
+  .hero-sub{font-size:.92rem}
+  .hero-pills{gap:6px}
+  .hero-pill{font-size:.7rem;padding:5px 10px}
+  .page{padding:36px 4% 56px}
+  .left-desc{margin-bottom:28px}
+  .expect-grid{grid-template-columns:1fr}
+  .proof-strip{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 18px}
+  .alt-grid{grid-template-columns:1fr}
+  .alt-item{
+    display:flex;
+    align-items:center;
+    text-align:left;
+    gap:14px;
+    padding:13px 14px;
+  }
+  .alt-icon{margin:0;flex-shrink:0}
+  .form-card{margin-top:32px;padding:20px 16px;border-radius:16px}
+  .tally-wrap{margin:0 -16px -20px}
+  footer{padding:40px 4% 0}
+  .ft-si{padding:0 4%}
+}
+
+/* Very small ≤380px */
+@media(max-width:380px){
+  .hero h1 .line1{font-size:2rem}
+  .hero h1 .line2{font-size:1.65rem}
+  .hero-sub{font-size:.86rem}
+  .hero-badge{font-size:.62rem;padding:4px 11px}
+  .form-card{padding:16px 13px}
+  .tally-wrap{margin:0 -13px -16px}
+  .fc-title{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://favze.com" class="nav-logo">FAVZE</a>
+  <ul class="nl">
+    <li><a href="https://favze.com/services">Services</a></li>
+    <li><a href="https://favze.com/favze-insights">Articles</a></li>
+    <li><a href="https://favze.com/why-choose-us">Why Us</a></li>
+    <li><a href="https://favze.com/about">About</a></li>
+    <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+    <li><a href="https://favze.com/contact" class="nc">Free Consultation</a></li>
+  </ul>
+  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm">
+  <a href="https://favze.com/services">Services</a>
+  <a href="https://favze.com/favze-insights">Articles</a>
+  <a href="https://favze.com/why-choose-us">Why Us</a>
+  <a href="https://favze.com/about">About</a>
+  <a href="https://favze.com/digital-marketing-faq">FAQ</a>
+  <a href="https://favze.com/contact" class="mc-mob">Start Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 .5C3.07.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5S8.5 6.52 8.5 4C8.5 2.07 6.93.5 5 .5z" fill="rgba(10,137,163,.4)" stroke="#0A89A3" stroke-width=".9"/><circle cx="5" cy="4" r="1.2" fill="#0A89A3"/></svg>
+      Northern Indiana · No Pitch · No Contracts · Free
+    </div>
+    <h1>
+      <span class="line1">Book Your Free</span>
+      <span class="line2">Consultation</span>
+    </h1>
+    <p class="hero-sub">No pitch. No pressure. No obligation. <strong>Riley will look at your digital presence with you</strong>, show you exactly where customers are finding competitors instead of you, and give you an honest roadmap — whether you hire us or not. About 30 minutes.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Completely Free</span>
+      <span class="hero-pill">Talk to Riley Directly</span>
+      <span class="hero-pill">No Contracts Required</span>
+      <span class="hero-pill">~30 Minutes</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST MARQUEE -->
+<div class="trust">
+  <div class="trust-track">
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>No Long-Term Contracts</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Talk to Riley. Not a Rep.</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>Free Consultation. No Obligation.</div>
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>All 12 Services Under One Roof</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Honest Reporting. Real Results.</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>Serving All of Northern Indiana</div>
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>SEO · AEO · GEO · AI Optimization</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Based in Middlebury, Indiana</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>No Hidden Fees. Ever.</div>
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>No Long-Term Contracts</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Talk to Riley. Not a Rep.</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>Free Consultation. No Obligation.</div>
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>All 12 Services Under One Roof</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Honest Reporting. Real Results.</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>Serving All of Northern Indiana</div>
+    <div class="trust-pill tp-navy"><span class="trust-pip"></span>SEO · AEO · GEO · AI Optimization</div>
+    <div class="trust-pill tp-teal"><span class="trust-pip"></span>Based in Middlebury, Indiana</div>
+    <div class="trust-pill tp-dark"><span class="trust-pip"></span>No Hidden Fees. Ever.</div>
+  </div>
+</div>
+
+<!-- PAGE -->
+<div class="page">
+
+  <!-- LEFT COLUMN -->
+  <div>
+    <div class="section-eyebrow">What You'll Get</div>
+    <h2 class="left-title">A Straight Answer. <em>Not a Sales Script.</em></h2>
+    <p class="left-desc">Most agency consultations are thinly disguised sales pitches. This one isn't. Riley will pull up your actual Google Business Profile, your search rankings, and your competitors' digital presence — live, on the call — and tell you exactly what's happening and what it would take to fix it.</p>
+
+    <div class="expect-grid">
+      <div class="expect-item">
+        <div class="ei-num">01</div>
+        <div>
+          <div class="ei-title">Full Digital Audit</div>
+          <div class="ei-desc">Your rankings, Google Business Profile, website speed, and competitor positioning reviewed live.</div>
+        </div>
+      </div>
+      <div class="expect-item">
+        <div class="ei-num">02</div>
+        <div>
+          <div class="ei-title">Competitor Gap Analysis</div>
+          <div class="ei-desc">Find out which competitors are beating you in search and exactly why.</div>
+        </div>
+      </div>
+      <div class="expect-item">
+        <div class="ei-num">03</div>
+        <div>
+          <div class="ei-title">Honest Recommendation</div>
+          <div class="ei-desc">Riley tells you what would actually move the needle for your business. Not a package. A real answer.</div>
+        </div>
+      </div>
+      <div class="expect-item">
+        <div class="ei-num">04</div>
+        <div>
+          <div class="ei-title">Timeline + Real Costs</div>
+          <div class="ei-desc">You'll leave knowing what results are possible, when, and what a realistic investment looks like.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-strip">
+      <div class="ps-item">
+        <div class="ps-icon">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5a4.5 4.5 0 109 0 4.5 4.5 0 00-9 0z" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 5v2.5L9 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="ps-text"><strong>~30 Minutes</strong><br>Typical call</div>
+      </div>
+      <div class="ps-sep"></div>
+      <div class="ps-item">
+        <div class="ps-icon">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5l3 3 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="ps-text"><strong>Zero Obligation</strong><br>You decide what's next</div>
+      </div>
+      <div class="ps-sep"></div>
+      <div class="ps-item">
+        <div class="ps-icon">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="5.5" r="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 13c0-2.21 2.24-4 5-4s5 1.79 5 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="ps-text"><strong>Talk to Riley</strong><br>Founder. Not a rep.</div>
+      </div>
+    </div>
+
+    <div class="alt-title">Prefer to Reach Out Directly?</div>
+    <div class="alt-grid">
+      <div class="alt-item">
+        <div class="alt-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2s1-.5 2 1l1 1.5s.5 1-.5 1.9L3.9 7s-.4.4 0 1.3 1.5 2 3.4 3c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L11.9 11.5c1.3.9.9 1.7.9 1.7-.5.9-2.2 1.3-3.6.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <div class="alt-label">Call or Text</div>
+          <div class="alt-val"><a href="tel:+15747475012">574-747-5012</a></div>
+        </div>
+      </div>
+      <div class="alt-item">
+        <div class="alt-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.8" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 6.5l6.5 4 6.5-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <div class="alt-label">Email Riley</div>
+          <div class="alt-val"><a href="mailto:riley@favze.com">riley@favze.com</a></div>
+        </div>
+      </div>
+      <div class="alt-item">
+        <div class="alt-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.24 1.5 3 3.74 3 6.5c0 3.5 5 9 5 9s5-5.5 5-9c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="6.5" r="1.8" stroke="currentColor" stroke-width="1.2"/></svg>
+        </div>
+        <div>
+          <div class="alt-label">Based In</div>
+          <div class="alt-val">Middlebury, IN</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: TALLY -->
+  <div>
+    <div class="form-card">
+      <span class="fc-lbl">No Pitch. No Pressure. Just Honest Advice.</span>
+      <div class="fc-title">Claim Your Free Consultation</div>
+      <p class="fc-sub">Fill this out and Riley will reach out within one business day to schedule your call. No commitment required.</p>
+
+      <div class="tally-wrap">
+        <iframe
+          data-tally-src="https://tally.so/embed/aQjrzb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+          loading="lazy"
+          width="100%"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Claim Your Free Consultation">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#064187;letter-spacing:.04em">FAVZE</span>
+        </div>
+        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. All 12 services. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
+        <div class="ft-social">
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div class="fc-col">
+        <h4>All 12 Services</h4>
+        <ul>
+          <li><a href="https://favze.com/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="https://favze.com/answer-engine-optimization">AEO</a></li>
+          <li><a href="https://favze.com/generative-engine-optimization">GEO</a></li>
+          <li><a href="https://favze.com/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/email-marketing">Email Marketing</a></li>
+          <li><a href="https://favze.com/paid-search-ads-sem">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/website-design">Website Design</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://favze.com/">Home</a></li>
+          <li><a href="https://favze.com/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/about">About</a></li>
+          <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+          <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+          <li><a href="https://favze.com/favze-insights">Articles</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h4>Contact</h4>
+          <div class="fcon">
+            <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
+            <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
+            <a href="https://favze.com/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-serving-strip">
+      <div class="ft-si">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span class="ft-sl">SERVING</span>
+          <div class="ft-slocs">
+            <a href="https://favze.com/areas-served/jasper-county">Jasper County</a><span class="ft-sdot"></span>
+            <a href="https://favze.com/areas-served/jasper-county">Rensselaer</a><span class="ft-sdot"></span>
+            <a href="https://favze.com/areas-served/jasper-county">DeMotte</a><span class="ft-sdot"></span>
+            <a href="https://favze.com/areas-served/jasper-county">Remington</a><span class="ft-sdot"></span>
+            <span style="font-size:.78rem;color:rgba(255,255,255,.3)">+ All Northern Indiana</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 .5C3.07.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5S8.5 6.52 8.5 4C8.5 2.07 6.93.5 5 .5z" fill="rgba(10,137,163,.5)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+          <span style="font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase">MIDDLEBURY, ELKHART COUNTY, IN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fb-bot">
+      <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="https://favze.com/privacy-policy">Privacy Policy</a>
+        <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/areas-served">Areas Served</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav hamburger
+var hb=document.getElementById('hb'),mm=document.getElementById('mm');
+if(hb&&mm){
+  hb.addEventListener('click',function(){
+    var o=!mm.classList.contains('open');
+    mm.classList.toggle('open',o);
+    hb.classList.toggle('open',o);
+  });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      mm.classList.remove('open');
+      hb.classList.remove('open');
+    });
+  });
+}
+
+// Tally embed init fallback
+if(typeof Tally!=='undefined'){
+  Tally.loadEmbeds();
+} else {
+  document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){
+    e.src=e.dataset.tallySrc;
+  });
+}
+</script>
+</body>
+</html>
